@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Project",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/path/to/godot",
+            "args": [
+                //"--verbose", //useful for additional console output
+                "--editor",
+                "--path",
+                "${workspaceFolder}/project"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "build debug"
+        }
+    ]
+}

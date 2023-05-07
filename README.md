@@ -3,24 +3,24 @@
 GDExtension template that automatically builds into a self-contained addon for the Godot Asset Library.
 
 ### Getting started:
+
 1. Clone this repository (or a new repository with this template) with submodules.
     - `git clone --recurse-submodules https://github.com/nathanfranke/gdextension.git` \
     - `cd gdextension`
 2. Update to the latest `godot-cpp`.
     - `git submodule update --remote`
 2. Build a debug binary for the current platform.
-    - `scons`
-3. Import, edit, and play `project/` using Godot Engine 4+.
-    - Alternatively, run the project using the terminal.
-      - Either alias an existing executable to godot4: `alias godot4="~/workspace/godot/bin/godot.linuxbsd.tools.x86_64"`
-      - Or, on Arch Linux, install `godot4-bin` from the AUR (`yay -S aur/godot4-bin`).
-    - Finally, `godot4 --path project/`
-4. Check the output:
+    - `CTRL + Shift + P` -> `Run Task` -> `build godot_cpp debug` (only for the first time)
+    - Inside [launch.json](.vscode/launch.json) set the program path to the path to your godot executable.
+    - For Debugging in VS Code you can now just press `F5` or select `Run`->`Start Debugging` in the menu bar
+3. Run the project inside Godot and check the output:
    ```
    Hello GDScript!
    Hello GDExtension Node!
    Hello GDExtension Singleton!
    ```
+
+An official guide can be found [here](https://docs.godotengine.org/en/stable/tutorials/scripting/gdextension/gdextension_cpp_example.html#doc-gdextension-cpp-example)
 
 ### Repository structure:
 - `project/` - Godot project boilerplate.
