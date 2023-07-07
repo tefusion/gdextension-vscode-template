@@ -5,8 +5,7 @@
 
 using namespace godot;
 
-class MySingleton : public Object
-{
+class MySingleton : public Object {
 	GDCLASS(MySingleton, Object);
 
 	static MySingleton *singleton;

@@ -7,29 +7,24 @@ using namespace godot;
 
 MySingleton *MySingleton::singleton = nullptr;
 
-void MySingleton::_bind_methods()
-{
+void MySingleton::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("hello_singleton"), &MySingleton::hello_singleton);
 }
 
-MySingleton *MySingleton::get_singleton()
-{
+MySingleton *MySingleton::get_singleton() {
 	return singleton;
 }
 
-MySingleton::MySingleton()
-{
+MySingleton::MySingleton() {
 	ERR_FAIL_COND(singleton != nullptr);
 	singleton = this;
 }
 
-MySingleton::~MySingleton()
-{
+MySingleton::~MySingleton() {
 	ERR_FAIL_COND(singleton != this);
 	singleton = nullptr;
 }
 
-void MySingleton::hello_singleton()
-{
+void MySingleton::hello_singleton() {
 	UtilityFunctions::print("Hello GDExtension Singleton!");
 }

@@ -5,8 +5,7 @@
 
 using namespace godot;
 
-class MyNode : public Node
-{
+class MyNode : public Node {
 	GDCLASS(MyNode, Node);
 
 protected:
